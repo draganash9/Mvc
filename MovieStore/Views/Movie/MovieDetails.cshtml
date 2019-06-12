@@ -1,0 +1,16 @@
+﻿@model   MovieModel
+@{
+    ViewData["Title"] = "MovieDetails";
+}
+
+<h1>MovieDetails</h1>
+
+<div>
+    @Html.HiddenFor(m => m.Id)
+    <h3>Name: @Model.Name</h3>
+    <p>Genre: @Model.Genre</p>
+    <p>Rating: @Model.Rating</p>
+    <p>Length: @Model.Length</p>
+    @Html.ActionLink("Back to movies","Movies")
+
+</div>

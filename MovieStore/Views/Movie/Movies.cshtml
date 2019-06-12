@@ -1,0 +1,19 @@
+﻿@model List<MovieModel>
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<h1>Movies</h1>
+<div>
+    @Html.ActionLink("Add Movie","Add")
+    <ul>
+        @foreach (var movie in Model)
+        {
+        <li>Name: @movie.Name @Html.ActionLink("Details", "MovieDetails", new { id = movie.Id }) @Html.ActionLink("Edit movie", "Edit", new { id = movie.Id })</li>
+
+        }
+    </ul>
+    <span><a href="~/MoviesPDF.pdf" target="_blank">All movies in pdf</a></span>
+    @Html.ActionLink("Back to home","Index","Home")
+
+</div>

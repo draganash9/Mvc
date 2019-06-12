@@ -1,0 +1,15 @@
+﻿@model MovieModel
+@{
+    ViewData["Title"] = "Remove";
+}
+
+<h1>Remove</h1>
+
+@using (@Html.BeginForm("RemoveMovie", "Movie", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+    <div class="form-group">
+        <p>@Model.Name</p>
+    </div>
+    <input value="Remove" type="submit" />
+}
